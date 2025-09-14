@@ -1,0 +1,27 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Varun04-pixel/Weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Varun04-pixel/Weather-app/issues"
+  },
+  "homepage": "https://github.com/Varun04-pixel/Weather-app#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

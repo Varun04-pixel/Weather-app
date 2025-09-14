@@ -1,4 +1,3 @@
-const api_key = Your_API_Key; // openweathermap.org
 const content = document.getElementById("container");
 const input_location = document.getElementById("input");
 const button = document.getElementById("btn");
@@ -6,11 +5,13 @@ const weather_icon_box = document.getElementById("weather-icon");
 const weather_icon = document.createElement("img");
 const weather_details = document.getElementById("weather-details");
 const extra_info = document.getElementById("extra-info");
+
 input_location.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     button.click();
   }
 });
+
 button.addEventListener("click", function () {
   if (input_location.value.trim() == "") {
     return;
@@ -19,20 +20,25 @@ button.addEventListener("click", function () {
   void content.offsetWidth;
   content.classList.add("animate__slideInUp");
   content.style.display = "block";
-  const loc = input.value.trim();
+  const loc = input_location.value.trim();
   getWeather(loc);
   input_location.value = "";
   input_location.focus();
 });
+
 async function getWeather(loc) {
   weather_icon_box.innerHTML = "";
   weather_icon.remove();
   weather_details.innerHTML = "";
   extra_info.innerHTML = "";
   try {
-    let response = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${loc}&aqi=no`
-    );
+    let response = await fetch('/api/response', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({loc})
+    });
     let data = await response.json();
     const date = new Date();
     let day = date.toLocaleDateString("indian", { weekday: "long" });
