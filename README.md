@@ -44,10 +44,10 @@ A simple weather forecast web application where users can search for a city and 
 
    -Add your Weather API key [visit openWeather for API Key](https://openweathermap.org/):
 
-  `API_KEY = Your_API_key_here`
+    `API_KEY = Your_API_key_here`
   
-  `PORT = 3000`
+    `PORT = 3000`
 
 4. **Run the server**
 
-  `nodemon server.js`
+    `nodemon server.js`
