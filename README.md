@@ -2,6 +2,10 @@
 
 A simple weather forecast web application where users can search for a city and view real-time weather details such as **temperature, humidity, wind speed, and conditions**.  
 
+## Visit Live Demo
+
+🔗 [Weather App](https://weather-app-ardd.onrender.com)
+
 ![Preview Screenshot](./public/assets/weather.png)
 
 ---
