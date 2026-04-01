@@ -32,13 +32,13 @@ A simple weather forecast web application where users can search for a city and 
    cd Weather-app
 ```
 
-3. **Install dependencies**
+2. **Install dependencies**
 
 ```bash
    npm install
 ```
 
-5. **Add Environment Variables**
+3. **Add Environment Variables**
 
    -Create a .env file in the project root.
 
